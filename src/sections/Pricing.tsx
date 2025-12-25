@@ -35,7 +35,7 @@ export const Pricing = () => {
         {/* Host Section */}
         <div className="mt-14 flex flex-col items-center">
           <h3 className="text-5xl font-bold mb-8 bg-gradient-to-b from-black to-darked text-transparent bg-clip-text">Host</h3>
-          <div className="p-3 rounded-2xl border border-black/5 shadow-xl hover:scale-105 transition-transform duration-300 bg-white">
+          <div className="p-3 rounded-2xl border-[0.5px] border-black/5 shadow-xl hover:scale-105 transition-transform duration-300 bg-white">
             <Image src={host1} alt="Host" className="rounded-xl h-[400px] w-[300px] object-cover" />
           </div>
         </div>
@@ -46,10 +46,8 @@ export const Pricing = () => {
           <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <motion.div
               className="flex gap-8 flex-none pr-8"
-              animate={{
-                translateX: "0%",
-              }}
-              initial={{ translateX: "-50%" }}
+              animate={{ translateX: "-50%" }}
+              initial={{ translateX: "0%" }}
               transition={{
                 duration: 30,
                 repeat: Infinity,
@@ -58,7 +56,7 @@ export const Pricing = () => {
               }}
             >
               {[...judges, ...judges].map((judge, index) => (
-                <div key={index} className="flex-none p-3 rounded-2xl border border-black/5 shadow-lg bg-white hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div key={index} className="flex-none p-3 rounded-2xl border-[0.5px] border-black/5 shadow-lg bg-white hover:scale-105 transition-transform duration-300 cursor-pointer">
                   <Image
                     src={judge}
                     alt={`Judge ${index + 1}`}
@@ -76,10 +74,8 @@ export const Pricing = () => {
           <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <motion.div
               className="flex gap-8 flex-none pr-8"
-              animate={{
-                translateX: "0%",
-              }}
-              initial={{ translateX: "-50%" }}
+              animate={{ translateX: "-50%" }}
+              initial={{ translateX: "0%" }}
               transition={{
                 duration: 35,
                 repeat: Infinity,
@@ -88,7 +84,7 @@ export const Pricing = () => {
               }}
             >
               {[...moderators, ...moderators].map((mod, index) => (
-                <div key={index} className="flex-none p-3 rounded-2xl border border-black/5 shadow-lg bg-white hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div key={index} className="flex-none p-3 rounded-2xl border-[0.5px] border-black/5 shadow-lg bg-white hover:scale-105 transition-transform duration-300 cursor-pointer">
                   <Image
                     src={mod}
                     alt={`Moderator ${index + 1}`}
@@ -106,10 +102,8 @@ export const Pricing = () => {
           <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <motion.div
               className="flex gap-8 flex-none pr-8"
-              animate={{
-                translateX: "0%",
-              }}
-              initial={{ translateX: "-50%" }}
+              animate={{ translateX: "-50%" }}
+              initial={{ translateX: "0%" }}
               transition={{
                 duration: 25,
                 repeat: Infinity,
@@ -118,7 +112,7 @@ export const Pricing = () => {
               }}
             >
               {[...screeners, ...screeners].map((screener, index) => (
-                <div key={index} className="flex-none p-3 rounded-2xl border border-black/5 shadow-lg bg-white hover:scale-105 transition-transform duration-300 cursor-pointer">
+                <div key={index} className="flex-none p-3 rounded-2xl border-[0.5px] border-black/5 shadow-lg bg-white hover:scale-105 transition-transform duration-300 cursor-pointer">
                   <Image
                     src={screener}
                     alt={`Screener ${index + 1}`}

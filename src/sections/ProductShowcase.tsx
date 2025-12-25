@@ -1,8 +1,4 @@
 "use client";
-import productImage from "@/assets/product-image.png";
-import pyramidImage from "@/assets/pyramid.png";
-import tubeImage from "@/assets/tube.png";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -13,15 +9,17 @@ export const ProductShowcase = () => {
     offset: ["start end", "end start"],
   });
 
-  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
-
-  // Parallax for cards
+  // Parallax for cards (Kept as these affect the grid items, not the floating images)
   const cardOneY = useTransform(scrollYProgress, [0, 1], [50, -50]);
-  const cardTwoY = useTransform(scrollYProgress, [0, 1], [0, 0]); // Center stays relative
+  const cardTwoY = useTransform(scrollYProgress, [0, 1], [0, 0]);
   const cardThreeY = useTransform(scrollYProgress, [0, 1], [-50, 50]);
 
   return (
-    <section id="about" ref={sectionRef} className="bg-gradient-to-b from-white to-light-gray py-24 overflow-x-clip relative">
+    <section
+      id="about"
+      ref={sectionRef}
+      className="bg-gradient-to-b from-white to-light-gray py-24 overflow-x-clip relative"
+    >
       <div className="container relative z-10">
         <div className="section-heading">
           <div className="flex justify-center">
@@ -30,8 +28,9 @@ export const ProductShowcase = () => {
 
           <h2 className="section-title mt-5">ThinkerRoot IDEATHON 2025</h2>
           <p className="section-des mt-5">
-            ThinkerRoot IDEATHON 2025 is a Web3-focused idea pitching platform powered by Lenient Tree,
-            built to spotlight innovation across the ideathon and hackathon ecosystem.
+            ThinkerRoot IDEATHON 2025 is a Web3-focused idea pitching platform
+            powered by Lenient Tree, built to spotlight innovation across the
+            ideathon and hackathon ecosystem.
           </p>
         </div>
 
@@ -41,7 +40,8 @@ export const ProductShowcase = () => {
               Spotlight Innovation
             </h3>
             <p className="text-black mt-2">
-              Powered by Lenient Tree, we provide a unified stage to showcase bold ideas and ground-breaking solutions.
+              Powered by Lenient Tree, we provide a unified stage to showcase
+              bold ideas and ground-breaking solutions.
             </p>
           </motion.div>
           <motion.div style={{ translateY: cardTwoY }} className="card">
@@ -49,7 +49,8 @@ export const ProductShowcase = () => {
               Unified Stage
             </h3>
             <p className="text-black mt-2">
-              Connecting startups, companies, hackathon winners, and student innovators in one ecosystem.
+              Connecting startups, companies, hackathon winners, and student
+              innovators in one ecosystem.
             </p>
           </motion.div>
           <motion.div style={{ translateY: cardThreeY }} className="card">
@@ -57,30 +58,12 @@ export const ProductShowcase = () => {
               Future-Ready Community
             </h3>
             <p className="text-black mt-2">
-              Gain visibility and connect with a community driving decentralized technologies and real-world impact.
+              Gain visibility and connect with a community driving decentralized
+              technologies and real-world impact.
             </p>
           </motion.div>
         </div>
-        <motion.img
-          src={tubeImage.src}
-          alt="Tube image"
-          height={248}
-          width={248}
-          className="hidden md:block absolute bottom-24 -left-36 -z-10"
-          style={{
-            translateY: translateY,
-          }}
-        />
-        <motion.img
-          src={pyramidImage.src}
-          alt="Pyramid image"
-          height={262}
-          width={262}
-          className="hidden md:block absolute -right-36 -top-32 -z-10"
-          style={{
-            translateY: useTransform(scrollYProgress, [0, 1], [-200, 200]),
-          }}
-        />
+        {/* Floating images and their parallax logic have been removed from here */}
       </div>
     </section>
   );

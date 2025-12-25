@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Oswald } from "next/font/google";
+import { Orbitron } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 
-const oswald = Oswald({ subsets: ["latin"] });
+const orbitron = Orbitron({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Saas Landing Page",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="relative">
-      <body className={twMerge(oswald.className, "antialiased bg-white")}>{children}</body>
+      <body className={twMerge(orbitron.className, "antialiased bg-white")}>{children}</body>
     </html>
   );
 }

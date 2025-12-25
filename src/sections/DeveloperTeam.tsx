@@ -51,7 +51,7 @@ export const DeveloperTeam = () => {
             {[...teamMembers, ...teamMembers].map((member, index) => (
               <div
                 key={index}
-                className="relative shrink-0 w-[280px] h-[380px] rounded-2xl overflow-hidden border border-black/10 group shadow-lg"
+                className="relative shrink-0 w-[280px] h-[380px] rounded-2xl overflow-hidden border-[0.5px] border-black/10 group shadow-lg"
               >
                 {/* Image */}
                 <Image

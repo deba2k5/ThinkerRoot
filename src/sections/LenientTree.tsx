@@ -48,7 +48,7 @@ export const LenientTree = () => {
                     }}
                 >
                     {[...images, ...images].map((img, index) => (
-                        <div key={index} className="relative w-[400px] h-[300px] md:w-[600px] md:h-[400px] rounded-2xl overflow-hidden border-2 border-black flex-shrink-0 group">
+                        <div key={index} className="relative w-[400px] h-[300px] md:w-[600px] md:h-[400px] rounded-2xl overflow-hidden border-[0.5px] border-black flex-shrink-0 group">
                             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300 z-10" />
                             <Image
                                 src={img}
