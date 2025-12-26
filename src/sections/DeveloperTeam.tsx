@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Aranya Rath",
     role: "Developer",
-    image: coreTeam1,
+    image: aranyaImage,
   },
 ];
 
